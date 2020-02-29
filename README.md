@@ -22,7 +22,13 @@ Users: {
   ]
 }
 ```
-The result object of calling ```javascript objectNumFilter(Users)``` will be:
+The result object of calling 
+```javascript
+objectNumFilter(Users)
+``` 
+
+will be:
+
 ```javascript
 {
   count: 2,
