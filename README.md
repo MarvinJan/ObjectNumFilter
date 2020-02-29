@@ -26,9 +26,9 @@ The result object will be
 ```javascript
 {
   count: 2,
-  users.0.age: 25,
-  users.0.salary: 50000,
-  users.1.age: 33,
-  users.1.salary, 70000
+  "users.0.age": 25,
+  "users.0.salary": 50000,
+  "users.1.age": 33,
+  "users.1.salary": 70000
 }
 ```
