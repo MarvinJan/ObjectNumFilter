@@ -1,7 +1,10 @@
 # ObjectNumFilter
-Filters JS object for number only values, setting value keys as a path from the initial object, e.g. { user.age: 30 }
+Simple snippet which filters JS object for number only values, setting value keys as a path from the initial object, e.g. { user.age: 30 }
 
-##Example
+## Usage 
+Copy the function without *export* keyword into your code and call the function or simply use *import* keyword
+
+## Example
 if you have object like 
 ```javascript
 Users: {
