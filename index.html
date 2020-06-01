@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="objectNumFilter.js"></script>
+	</head>
+	<body></body>
+	<script>
+		const testObject = {
+			count: 2,
+			error: false,
+			users: [
+				{
+					age: 25,
+					salary: 50000,
+					firstname: 'John',
+					lastname: 'Doe',
+					boolProp: true,
+				},
+				{
+					age: 33,
+					salary: 70000,
+					firstname: 'Martha',
+					lastname: 'Whydatname',
+					nullProp: null,
+					symbol: Symbol('test symbol'),
+				},
+			],
+		};
+		console.log(objectFilter(testObject, 'boolean'));
+	</script>
+</html>
