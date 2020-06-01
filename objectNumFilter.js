@@ -1,19 +1,25 @@
-export function objectNumFilter(obj, result = {}, path: string = "") {
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      switch (typeof obj[key]) {
-        case "number":
-          result[!path ? key : path + `.${key}`] = obj[key];
-          break;
-        case "object":
-          objectNumFilter(obj[key], result, !path ? key : path + `.${key}`);
-          break;
-        default:
-          false;
-          break;
-      }
-    }
-  }
+function objectFilter(obj, filterType = 'number', result = {}, path = '') {
+	Object.getOwnPropertyNames(obj).forEach((key) => {
+		if (obj[key] === null) return;
 
-  return result;
+		switch (typeof obj[key]) {
+			case filterType:
+				result[!path ? key : path + `.${key}`] = obj[key];
+				break;
+			case 'object':
+				objectFilter(obj[key], filterType, result, !path ? key : path + `.${key}`);
+				break;
+			default:
+				false;
+				break;
+		}
+	});
+
+	return result;
+}
+function objectNumFilter(obj) {
+	return objectFilter(obj, 'number');
+}
+function objectStringFilter(obj) {
+	return objectFilter(obj, 'string');
 }
